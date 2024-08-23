@@ -1,0 +1,115 @@
+.ContactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 30px;
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contactInfo {
+  width: 45%;
+}
+
+.formSection {
+  width: 50%;
+}
+
+.form {
+  border-style: outset;
+  padding: 1rem;
+  width: 100%;
+  z-index: 2;
+  color: #0c0c0c;
+}
+
+.submitBtn {
+  display: flex;
+  background-color: #0c0c0c;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  z-index: 2;
+  cursor: pointer;
+  /* position: relative; */
+  overflow: hidden;
+  color: #fff;
+  transition: color 0.8s, box-shadow 0.25s;
+  box-shadow: inset 0 0 0 0 transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactInfo .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contactInfo .item .icon {
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+.contactInfo .item .text {
+  margin-left: 1rem;
+  color: #0c0c0c;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfo, .formSection {
+    width: 100%;
+  }
+
+  .contactInfo {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .container {
+    width: 24rem;
+  }
+
+  .contentWrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    width: 18rem;
+  }
+}

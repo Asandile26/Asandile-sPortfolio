@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    color: #fff;
+    background-color: #081b29;
+  }
+  .subTitle {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+  }
+  
+
+  section {
+    display: flex;
+    flex-direction: column; /* Stack items by default */
+    align-items: center;
+    gap: 50px;
+  }
+  
+  /* .container2, .container1 {
+    width: 100%;
+    max-width: 600px; 
+    padding: 20px;
+  } */
+  
+  .heading {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+  }
+  
+  .bar {
+    font-size: 23px;
+    /* margin-bottom: 20px;  */
+  }
+  
+  .technical .bar{
+    margin: 40px 0;
+  }
+  
+  .technical .bar:first-child {
+    margin-top: 0;
+  }
+  
+  .technical .bar:last-child {
+    margin-bottom: 0;
+  }
+  
+  .technical .bar .info {
+    margin-bottom: 5px;
+  }
+  
+  .technical .bar .info span {
+    font-size: 17px;
+    font-family: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 1;
+  }
+  
+  .progressLine {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+.progressLine span {
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+  }
+  
+  .progressLine.html span {
+    width: 90%;
+  }
+  
+  .progressLine.vue span {
+    width: 80%;
+  }
+  
+  .progressLine.bootstrap span {
+    width: 85%;
+  }
+  .progressLine.data span {
+    width: 70%;
+  }
+  .progressLine.css span {
+    width: 85%;
+  }
+  .progressLine.javascript span {
+    width: 65%;
+  }
+
+  .progressLine.react span {
+    width: 55%;
+  }
+  .progressLine.typescript span {
+    width: 55%;
+  }
+
+  .progressLine.certification span {
+    width: 40%;
+  }
+  .progressLine span::after{
+ position: absolute;
+ padding: 1px 8px;
+ background-color: #000000;
+ color: #fff;
+ font-size: 12px;
+ border-radius: 3px;
+ top: -28px;
+ right: 20px;
+ animation: showText 0.5s 1.5s linear forwards;
+
+  }
+
+  .progressLine.html span::after {
+    content: "90%";
+  }
+  
+  .progressLine.vue span::after {
+    content: "80%";
+  }
+  
+  .progressLine.bootstrap span::after {
+    content: "85%";
+  }
+  .progressLine.data span::after {
+    content: "70%";
+  }
+  .progressLine.css span::after {
+    content: "85%";
+  }
+  .progressLine.javascript span::after {
+    content: "65%";
+  }
+
+  .progressLine.react span::after {
+    content: "55%";
+  }
+  .progressLine.typescript span::after {
+    content: "55%";
+  }
+  .progressLine.certification span::after {
+    content: "40%";
+  }
+
+.progressLine span::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.radialBars{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.radialBars .radialBar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.radialBars .radialBar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); /* Rotate to start from the top */
+}
+
+.radialBars .radialBar .progressBar {
+  stroke-width: 10;
+  stroke: #000000;
+  fill: transparent;
+  stroke-dasharray: 502; /* Total length of the circle's circumference */
+  stroke-dashoffset: 502; /* Initially hidden */
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+.path {
+  stroke-width: 10;
+  stroke: aqua;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+/* Animate the paths */
+.path1 { animation: animate-path1 1s 1s forwards; }
+.path2 { animation: animate-path2 1s 1s forwards; }
+.path3 { animation: animate-path3 1s 1s forwards; }
+.path4 { animation: animate-path4 1s 1s forwards; }
+.path5 { animation: animate-path5 1s 1s forwards; }
+.path6 { animation: animate-path6 1s 1s forwards; }
+.path7 { animation: animate-path7 1s 1s forwards; }
+.path8 { animation: animate-path8 1s 1s forwards; }
+
+@keyframes animate-bar {
+  to {
+    stroke-dashoffset: 0; 
+  }
+}
+
+@keyframes animate-path1 {
+  to {
+    stroke-dashoffset: 50.2; 
+  }
+}
+
+@keyframes animate-path2 {
+  to {
+    stroke-dashoffset: 90.4;
+  }
+}
+
+@keyframes animate-path3 {
+  to {
+    stroke-dashoffset: 50.2; 
+  }
+}
+
+
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 25.1;
+    }
+} 
+@keyframes animate-path5{
+    100%{
+        stroke-dashoffset: 50.2;
+    }
+}
+
+@keyframes animate-path6{
+    100%{
+        stroke-dashoffset: 100.4;
+    }
+} 
+@keyframes animate-path7{
+  100%{
+      stroke-dashoffset: 125.5;
+  }
+} 
+@keyframes animate-path8{
+  100%{
+      stroke-dashoffset: 40.2;
+  }
+} 
+
+.radialBar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 1;
+}
+.progressBar .percentage{
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    left: 50%;
+    bottom: -5px;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 1;
+
+}
+@media (min-width: 769px) {
+  .technical {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .technical .bar {
+    width: 48%; /* Adjust the width to fit two bars in one row */
+  }
+}
