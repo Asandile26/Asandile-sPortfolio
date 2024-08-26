@@ -40,7 +40,6 @@ function Testimonials() {
 
   return (
     <>
-      {/* Carousel for tablets and larger screens */}
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}

@@ -50,7 +50,7 @@
     }
   
     .testimonialsPage {
-      display: flex; /* Show testimonials in a grid layout */
+      display: flex; 
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
@@ -59,18 +59,18 @@
     }
   
     .testimonials .card {
-      width: 100%; /* Full width on small screens */
+      width: 100%; 
       margin: 10px;
     }
   }
   
-  @media (min-width: 768px) { /* Tablet and bigger screens */
+  @media (min-width: 768px) { 
     .testimonialsCarousel {
-      display: block; /* Show carousel */
+      display: block; 
     }
   
     .testimonialsPage {
-      display: none; /* Hide grid layout on larger screens */
+      display: none; 
     }
   }
   
@@ -103,4 +103,7 @@
   .testimonials .card-body {
     text-align: center;
   }
-  
+  .testimonialsCarousel {
+    margin: auto;
+    height: 35rem;
+}

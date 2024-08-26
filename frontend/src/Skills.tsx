@@ -4,7 +4,7 @@ import styleSki from "./assets/Styles/Skills.module.css";
 function Skills() {
   return (
     <div>
-      <h2 className={styleSki.subTile}>
+      <h2 className={styleSki.subTitle}>
         My <span>Skills</span>
       </h2>
       <section>
@@ -98,7 +98,7 @@ function Skills() {
           </div>
         </div>
         <div className={styleSki.container1}>
-          <div className={styleSki.heading}>Soft Skills</div>
+          <h2 className={styleSki.heading}>Soft Skills</h2>
           <div className={styleSki.radialBars}>
             <div className={styleSki.radialBar}>
               <svg x="0px" y="0px" viewBox="0 0 200 200">

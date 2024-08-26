@@ -10,7 +10,7 @@ function LandingPage() {
           Hi, It's <span className={Styles.sp1}>Asandile Langeni</span>
         </h1>
         <h3 className={Styles.text}>
-          I am <span></span>
+          I am a <span></span>
         </h3>
         <p>
           I am in the early stage of my career and now, I enjoy learning about
