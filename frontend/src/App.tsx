@@ -1,12 +1,12 @@
 import "./App.css";
-import Contact from "./Contact";
-import LandingPage from "./LandingPage";
-import MyNavbar from "./Navbar";
+import Contact from "./Components/Contact";
+import LandingPage from "./Components/LandingPage";
+import MyNavbar from "./Components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Skills from "./Skills";
-import Resume from "./Resume";
-import Testimonials from "./Testimonials";
-import Projects from "./Project";
+import Skills from "./Components/Skills";
+import Resume from "./Components/Resume";
+import Testimonials from "./Components/Testimonials";
+import Projects from "./Components/Project";
 
 function App() {
   return (

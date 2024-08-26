@@ -13,7 +13,11 @@
     padding: 2rem; 
     overflow-x: hidden;
 }
-
+.heading{
+    text-align: center;
+    margin: 0 auto 3rem auto; 
+    width: 100%;
+}
 
 .links {
     display: inline-block;
@@ -48,3 +52,25 @@
     object-position: top;
     background-position: center
   }
+
+
+  @media (max-width: 320px) {
+    .card-body {
+        --bs-card-spacer-x: 0; /* Reset horizontal spacing */
+        padding-left: 0; /* Remove left padding */
+        padding-right: 0; /* Remove right padding */
+      }
+  
+    .card-body .card-link {
+      width: 100%; 
+      margin: 0.5em 0; 
+      text-align: center;
+    }
+  
+    .links {
+      width: 80%; 
+      margin: 0.5em auto; 
+      padding: 0.5em; 
+    }
+  }
+  

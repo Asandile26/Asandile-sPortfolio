@@ -18,7 +18,7 @@
   }
   
   .sp1 {
-    color: blue;
+    color: #0000FF;
   }
   
   .content .text {
@@ -50,7 +50,7 @@
   }
   
   .Banner img:hover {
-    box-shadow: 0 0 25px blue;
+    box-shadow: 0 0 25px #0000FF;
   }
   
   .content p {
@@ -61,19 +61,33 @@
   }
   
   .socialIcons {
-    display: inline-flex;
+    display: flex; 
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .socialIcons a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
     background: transparent;
     border: 2px solid white;
-    font-size: 2.5rem;
     border-radius: 50%;
     color: white;
-    margin: 3rem 1.5rem 3rem 0;
+    font-size: 1.5rem;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
   }
+  
+  .socialIcons a:hover {
+    background-color: #0000FF; 
+    color: white;
+    transform: scale(1.1); 
+  }
+  
   
   .text {
     font-size: 34px;
@@ -206,8 +220,7 @@
     }
   
     .Banner img {
-      width: 40vw;
-      height: 40vh;
+      display: none;
     }
   
     .content p {
@@ -225,8 +238,7 @@
     }
   
     .Banner img {
-      width: 50vw;
-      height: 50vw;
+      display: none;
     }
   
     .socialIcons {

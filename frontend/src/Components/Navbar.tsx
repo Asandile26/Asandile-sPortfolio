@@ -2,7 +2,7 @@ import {} from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Styles from "./assets/Styles/Navbar.module.css";
+import Styles from "../assets/Styles/Navbar.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyNavbar() {
@@ -14,7 +14,9 @@ function MyNavbar() {
           className={Styles.brand}
           style={{ color: "#fff" }}
         >
-          React-Bootstrap
+          <Nav.Link href="/" className={Styles.navLink}>
+            Don
+          </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -1,6 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from "react";
-import "./assets/Styles/Contact.module.css";
-import styleCon from "./assets/Styles/Contact.module.css";
+import styleCon from "../assets/Styles/Contact.module.css";
 
 interface FormData {
   fullName: string;
@@ -19,34 +18,42 @@ function Contact() {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
+    setFormData((formData) => ({
+      ...formData,
       [name]: value,
     }));
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Form submitted with data:", formData);
+    try {
+      const response = await fetch("https://formspree.io/f/mleqyewv", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const response = await fetch("https://formspree.io/f/mleqyewv", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      console.log("Form successfully submitted");
-    } else {
-      console.error("Form submission error");
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert("Form submission failed.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Form submission failed.");
     }
   };
 
   return (
     <div className={styleCon.ContactPage}>
-      <h3>Contact us</h3>
+      <h3 className={styleCon.heading}>Contact us</h3>
       <div className={styleCon.contentWrapper}>
         <div className={styleCon.contactInfo}>
           <div className={styleCon.item}>
@@ -57,7 +64,7 @@ function Contact() {
               <h3>Address</h3>
               <p>
                 W659 Ndlovu Cr <br /> Site B <br />
-                khayelitsha <br /> 7784
+                Khayelitsha <br /> 7784
               </p>
             </div>
           </div>
@@ -107,7 +114,7 @@ function Contact() {
               <div id="emailHelp" className="form-text"></div>
             </div>
             <div className="mb-3">
-              <label className="form-label">Textarea</label>
+              <label className="form-label">Message</label>
               <textarea
                 className="form-control"
                 id="exampleFormControlTextarea1"

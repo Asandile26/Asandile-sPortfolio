@@ -2,11 +2,15 @@
 
 .design-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
-
+.headingRe{
+  text-align: center;
+  margin-bottom: 3rem;
+}
 .timeline {
   width: 80%;
   max-width: 800px;

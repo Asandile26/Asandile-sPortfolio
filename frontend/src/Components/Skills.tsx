@@ -1,15 +1,13 @@
 import {} from "react";
-import styleSki from "./assets/Styles/Skills.module.css";
+import styleSki from "../assets/Styles/Skills.module.css";
 
 function Skills() {
   return (
     <div>
-      <h2 className={styleSki.subTitle}>
-        My <span>Skills</span>
-      </h2>
+      <h2 className={styleSki.subTitle}>Skills</h2>
       <section>
         <div className={styleSki.container2} id="skills">
-          <h2 className={styleSki.heading}>Technical skills</h2>
+          <h3 className={styleSki.heading}>Technical skills</h3>
           <div className={styleSki.technical}>
             <div className={styleSki.bar}>
               <i className="bx bxl-html5" style={{ width: "7rem" }}></i>
