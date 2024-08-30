@@ -1,24 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .landingPage {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    padding: 2rem;
+    padding: 4rem;
     flex-wrap: nowrap; 
   }
   
   .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start; 
     text-align: left;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
     flex: 1;
   }
   
   .sp1 {
-    color: #0000FF;
+    color: var(--link_color);
   }
   
   .content .text {
@@ -44,13 +50,13 @@
     width: 20vw;
     height: 40vh;
     border-radius: 50%;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.5);
+    box-shadow: 0 0 15px 5px var(--link_color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
   }
   
   .Banner img:hover {
-    box-shadow: 0 0 25px #0000FF;
+    box-shadow: 0 0 25px var(--link_color);
   }
   
   .content p {
@@ -74,25 +80,28 @@
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--body_color);
     border-radius: 50%;
-    color: white;
+    color: var(--body_color);
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
     text-decoration: none;
   }
   
   .socialIcons a:hover {
-    background-color: #0000FF; 
-    color: white;
+    background-color: var(--link_color); 
+    color: var(--body_color);
     transform: scale(1.1); 
   }
   
   
   .text {
+    display: inline-block;
+    white-space: nowrap;
     font-size: 34px;
     font-weight: 600px;
     min-width: 280px;
+    width: 45%;
   }
   
   .text span {
@@ -100,13 +109,13 @@
     white-space: nowrap;
     position: relative;
     overflow: hidden;
-    border-right: 1px solid #fff;
+    border-right: 1px solid var(--body_color);
     animation: typing 20s steps(20) 1s 1 normal both, blink 0.7s infinite;
   }
   
   .text span::before {
     content: "Web Developer";
-    color: #fff;
+    color: var(--body_color);
     animation: words 20s infinite;
   }
   
@@ -174,32 +183,74 @@
     }
   }
   
-  /* Responsive Styles */
   
-  @media screen and (max-width: 1024px) {
-    .content h1 {
-      font-size: 5rem;
-    }
+ .btn{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  background-color: var(--body_color);
+  box-shadow: 0 0 25px var(--body_color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: var(--link_color);
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+ }
+
+ .btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 50px var(--body_color);
+ }
+ .btnGroup{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+ }
+ .btnGroup a:nth-of-type(2){
+  background-color: var(--body_color);
+  color: var(--link_color);
+  border: 2px solid transparent;
+  box-shadow: 0 025px transparent;
+ }
+
+ .btnGroup a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px var(--body_color);
+  background-color: var(--body_color);
+  color: var(--link_color);
+ }
+
+
+/* Responsive Styles */
   
-    .content .text {
-      font-size: 2.5rem;
-    }
-  
-    .Banner img {
-      width: 30vw;
-      height: 30vh;
-    }
-  
-    .socialIcons {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-  
-    .content p {
-      font-size: 1.3rem;
-    }
+@media screen and (max-width: 1024px) {
+  .content h1 {
+    font-size: 5rem;
   }
-  
+
+  .content .text {
+    font-size: 2.5rem;
+  }
+
+  .Banner img {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  .socialIcons {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .content p {
+    font-size: 1.3rem;
+  }
+}
+
   @media screen and (max-width: 768px) {
     .landingPage {
       flex-direction: column;

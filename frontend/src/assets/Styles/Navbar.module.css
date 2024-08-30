@@ -1,18 +1,35 @@
-*{
+/* Reset and box-sizing */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Navbar Brand Color */
 .brand .navbar-brand {
-  color: #fff !important;
+  color: var(--body_color) !important;
 }
+
+/* Navbar Link Color */
 .header .navLink {
-  color: #fff;
+  color: var(--body_color);
 }
-.ms-auto{
+
+/* Align items to the right side */
+.ms-auto {
   display: flex;
   gap: 1rem;
 }
 
+/* Navbar Link Hover Effect */
+.navLink:hover {
+  color: var(--link_color) !important;
+  text-decoration: underline; /* Example effect - underline on hover */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
 
+/* Navbar Background Color on Hover (optional) */
+.navbar-nav .nav-item:hover {
+  background-color: var(--link_color); /* Light background on hover */
+  border-radius: 5px; /* Add rounded corners */
+}

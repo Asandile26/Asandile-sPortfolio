@@ -40,6 +40,14 @@ function LandingPage() {
             <i className="bx bxl-linkedin"></i>
           </a>
         </div>
+        <div className={Styles.btnGroup}>
+          <a href="" className={Styles.btn}>
+            Hire me
+          </a>
+          <a href="/contact" className={Styles.btn}>
+            Connect
+          </a>
+        </div>
       </div>
       <div className={Styles.Banner}>
         <img src={Banner} alt="profile picture" />

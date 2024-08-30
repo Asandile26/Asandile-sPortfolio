@@ -32,7 +32,7 @@
 .timeline-circle {
   width: 15px;
   height: 15px;
-  background-image: linear-gradient(45deg, #f2f2f2, #0072ff, #f8fafc);
+  background-image: var(linear-gradient(45deg, --body_color, #0072ff, --body_background));
   border-radius: 50%;
   position: absolute;
   top: 50%;

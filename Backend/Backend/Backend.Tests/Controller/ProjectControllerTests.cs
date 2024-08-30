@@ -1,8 +1,8 @@
 ﻿using Backend.Controllers;
-using Backend.Interface;
-using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using POE.Core.Interface;
+using POE.Core.Models;
 
 namespace Backend.Tests.Controllers
 {
@@ -24,15 +24,15 @@ namespace Backend.Tests.Controllers
             var projects = new List<Project>
             {
                 new Project {
-                     Name = "Vue-Portfolio",
-                     GitHub = "https://github.com/Asandile26/Vue-Portfolio.git",
-                     Netlify = "https://portfolio-asandilelangeni.netlify.app",
-                     Image = "https://i.postimg.cc/SQwnPRYP/Vue-portfolio.png",
+                     Name = "Name of a project",
+                     GitHub = "git hub link",
+                     Netlify = "netlify link",
+                     Image = "link to image",
                     },
-                new Project {  Name = "Calculator",
-                     GitHub = "https://github.com/Asandile26/calculator.git",
-                     Netlify = "https://asandilelangenicalculator.netlify.app",
-                     Image = "https://i.postimg.cc/9QyFKBHR/Calculator.png", }
+                new Project {  Name = "Name of a project",
+                     GitHub = "git hub link",
+                     Netlify = "netlify linkk",
+                     Image = "link to image", }
             };
 
             _mockProjectRepository.Setup(repo => repo.GetProjects()).Returns(projects);

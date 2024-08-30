@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Backend.Migrations
+namespace POE.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class finalDb : Migration

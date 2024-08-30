@@ -1,6 +1,6 @@
-﻿using Backend.Models;
+﻿using POE.Core.Models;
 
-namespace Backend.Interface
+namespace POE.Core.Interface
 {
     public interface IResumeRepository
     {

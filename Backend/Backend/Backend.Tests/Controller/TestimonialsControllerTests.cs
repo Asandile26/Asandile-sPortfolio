@@ -1,8 +1,8 @@
 ﻿using Backend.Controllers;
-using Backend.Interface;
-using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using POE.Core.Interface;
+using POE.Core.Models;
 
 namespace Backend.Tests.Controllers
 {
@@ -23,12 +23,12 @@ namespace Backend.Tests.Controllers
             // Arrange
             var testimonials = new List<Testimonials>
             {
-                new Testimonials {  Name = "Athenkosi Freddie",
-                        Testimonial = "Asandile is a super nice person who is open & wise. He is always open to helping others and He is not afraid to express himself. He is a visionary and futurist, He is always open to learning about the people around annd also an amzing conversationalist. I am glad to know him as a person",
-                        Image = "https://i.postimg.cc/MGkfjTqR/Athii.png" },
-                new Testimonials { Name = "Umayr Nordien",
-                        Testimonial = "I know I can count on Asandile to work with me on both large and small projects. He is loyal to his ethical conduct and, based on my professional experience, does not deviate from these values. He is easy-going, and caring, with a strong mentality and always ready to help others",
-                        Image = "https://i.postimg.cc/k5MgYkXG/Umayr.jpg" }
+                new Testimonials {  Name = "Name of the person",
+                        Testimonial = "Their testimonial about mw",
+                        Image = "link to their image" },
+                new Testimonials {  Name = "Name of the person",
+                        Testimonial = "Their testimonial about mw",
+                        Image = "link to their image" },
             };
 
             _mockTestimonialsRepository.Setup(repo => repo.GetTestimonials()).Returns(testimonials);

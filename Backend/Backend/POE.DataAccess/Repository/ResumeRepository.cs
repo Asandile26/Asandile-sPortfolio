@@ -1,19 +1,18 @@
-﻿using Backend.Data;
-using Backend.Interface;
-using Backend.Models;
-
-namespace Backend.Repository
+﻿using POE.Core.Interface;
+using POE.Core.Models;
+using POE.DataAccess.Data;
+namespace POE.DataAccess.Repository
 {
     public class ResumeRepository : IResumeRepository
     {
-        private DataContext _context;
+        private readonly DataContext _context;
         public ResumeRepository(DataContext context)
         {
             _context = context;
 
         }
 
-        ICollection<Resume> IResumeRepository.GetResume()
+        public ICollection<Resume> GetResume()
         {
             return _context.Resume.OrderBy(s => s.Id).ToList();
         }

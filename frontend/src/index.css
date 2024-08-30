@@ -1,0 +1,25 @@
+:root {
+    --body_background: #fff;
+    --body_color: #0c0c0c;
+    --link_color: #0d6efd;
+  }
+  
+  [data-theme="dark"] {
+    --body_background: #0c0c0c;
+    --body_color: #fff;
+    --link_color: #0d6efd;
+  }
+  
+  * {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  
+  body {
+    background-color: var(--body_background);
+    color: var(--body_color);
+  }
+  
+  a {
+    color: var(--link_color);
+  }
+  

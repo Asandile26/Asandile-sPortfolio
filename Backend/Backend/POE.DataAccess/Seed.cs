@@ -1,7 +1,7 @@
-﻿using Backend.Data;
-using Backend.Models;
+﻿using POE.Core.Models;
+using POE.DataAccess.Data;
 
-namespace Backend
+namespace POE.DataAccess
 {
     public class Seed(DataContext context)
     {

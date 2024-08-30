@@ -25,6 +25,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Backend\Backend.csproj" />
+    <ProjectReference Include="..\POE.Core\POE.Core.csproj" />
+    <ProjectReference Include="..\POE.DataAccess\POE.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

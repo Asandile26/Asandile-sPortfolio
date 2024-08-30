@@ -1,8 +1,8 @@
-﻿using Backend.Data;
-using Backend.Interface;
-using Backend.Models;
+﻿using POE.Core.Interface;
+using POE.Core.Models;
+using POE.DataAccess.Data;
 
-namespace Backend.Repository
+namespace POE.DataAccess.Repository
 {
     public class TestimonialsRepository : ITestimonialsRepository
     {

@@ -1,8 +1,10 @@
-using Backend;
-using Backend.Data;
-using Backend.Interface;
-using Backend.Repository;
+using Backend.Controllers;
 using Microsoft.EntityFrameworkCore;
+using POE.Core.Interface;
+using POE.DataAccess;
+using POE.DataAccess.Data;
+using POE.DataAccess.Repository;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,9 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<ProjectController>();
+builder.Services.AddScoped<ResumeController>();
+builder.Services.AddScoped<TestimonialsController>();
 builder.Services.AddTransient<Seed>();
 builder.Services.AddScoped<IResumeRepository, ResumeRepository>();
 builder.Services.AddScoped<ITestimonialsRepository, TestimonialsRepository>();

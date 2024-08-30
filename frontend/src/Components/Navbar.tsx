@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Styles from "../assets/Styles/Navbar.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Theme from "./Theme";
 
 function MyNavbar() {
   return (
@@ -41,6 +42,7 @@ function MyNavbar() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <Theme />
       </Container>
     </Navbar>
   );

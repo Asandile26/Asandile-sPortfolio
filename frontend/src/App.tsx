@@ -7,6 +7,7 @@ import Skills from "./Components/Skills";
 import Resume from "./Components/Resume";
 import Testimonials from "./Components/Testimonials";
 import Projects from "./Components/Project";
+import "./index.css";
 
 function App() {
   return (

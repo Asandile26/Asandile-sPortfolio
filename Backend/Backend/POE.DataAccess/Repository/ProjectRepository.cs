@@ -1,19 +1,19 @@
-﻿using Backend.Data;
-using Backend.Interface;
-using Backend.Models;
+﻿using POE.Core.Interface;
+using POE.Core.Models;
+using POE.DataAccess.Data;
 
-namespace Backend.Repository
+namespace POE.DataAccess.Repository
 {
     public class ProjectRepository : IProjectRepository
     {
-        private DataContext _context;
+        private readonly DataContext _context;
+
         public ProjectRepository(DataContext context)
         {
             _context = context;
-
         }
 
-        ICollection<Project> IProjectRepository.GetProjects()
+        public ICollection<Project> GetProjects()
         {
             return _context.Projects.OrderBy(p => p.Id).ToList();
         }

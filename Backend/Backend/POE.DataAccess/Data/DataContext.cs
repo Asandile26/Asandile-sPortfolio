@@ -1,7 +1,7 @@
-﻿using Backend.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using POE.Core.Models;
 
-namespace Backend.Data
+namespace POE.DataAccess.Data
 {
     public class DataContext : DbContext
     {
